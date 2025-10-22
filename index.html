@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cửa hàng sách An Khang</title>
+  <!--
+    Gồm: header (tên + nav), main (giới thiệu + danh sách sản phẩm), form liên hệ, footer
+  -->
+  <!-- Liên kết file CSS ngoài -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header: tên cửa hàng và thanh điều hướng -->
+  <header>
+    <h1>Cửa hàng sách An Khang</h1>
+    <!-- Navigation: sử dụng # hoặc id để dẫn tới các phần trong trang -->
+    <nav>
+      <ul>
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#products">Sản phẩm</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Main: phần giới thiệu chung của cửa hàng -->
+    <section id="home">
+      <h2>Giới thiệu</h2>
+      <p>Chào mừng bạn đến với Cửa hàng sách An Khang .</p>
+    </section>
+
+    <!-- Section sản phẩm: mỗi sản phẩm đặt trong thẻ <article> để rõ ràng -->
+    <!-- Gợi ý: sử dụng lớp .products-list cho container và .product-item cho từng article -->
+    <section id="products">
+      <!-- Search + Add product controls -->
+      <div class="product-controls">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+        <button id="searchBtn">Tìm</button>
+        <button id="addProductBtn" type="button">Thêm sản phẩm</button>
+      </div>
+
+      <!-- Form thêm sản phẩm (ẩn mặc định). Có nút Hủy và vùng báo lỗi -->
+      <form id="addProductForm" class="hidden">
+        <h3>Thêm sản phẩm mới</h3>
+
+        <label for="newName">Tên sản phẩm:</label>
+        <input type="text" id="newName" required>
+
+        <label for="newPrice">Giá:</label>
+        <input type="number" id="newPrice" min="0.01" step="0.01" required>
+
+        <label for="newDesc">Mô tả:</label>
+        <textarea id="newDesc" rows="3"></textarea>
+
+        <div class="form-actions">
+          <button type="submit">Thêm</button>
+          <button type="button" id="cancelBtn">Hủy</button>
+        </div>
+
+        <!-- Vùng thông báo lỗi: ẩn khi không có lỗi -->
+        <p id="errorMsg" class="error" aria-live="polite" style="display:none"></p>
+      </form>
+
+      <h2>Sản phẩm nổi bật</h2>
+      <div class="products-list">
+        <article class="product-item">
+          <h3 class="product-name">Đắc Nhân Tâm – Dale Carnegie</h3>
+          <p>Tác phẩm kinh điển về nghệ thuật giao tiếp và ứng xử, giúp bạn xây dựng các mối quan hệ tốt đẹp và thành công trong công việc lẫn cuộc sống.</p>
+          <p class="price">Giá: 98.000đ</p>
+        </article>
+
+        <article class="product-item">
+          <h3 class="product-name">Tuổi trẻ đáng giá bao nhiêu – Rosie Nguyễn</h3>
+          <p>Cuốn sách truyền cảm hứng cho giới trẻ Việt Nam về việc học hỏi, trải nghiệm và sống có mục tiêu trong những năm tháng thanh xuân.</p>
+          <p class="price">Giá: 85.000đ</p>
+        </article>
+
+        <article class="product-item">
+          <h3 class="product-name">Nhà Giả Kim – Paulo Coelho</h3>
+          <p>Câu chuyện đầy triết lý về hành trình theo đuổi ước mơ và khám phá bản thân của chàng trai chăn cừu Santiago.</p>
+          <p class="price">Giá: 120.000đ</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section liên hệ: form đơn giản với các nhãn và trường required -->
+    <section id="contact">
+      <h2>Liên hệ với chúng tôi</h2>
+      <form>
+        <!-- Name field -->
+        <label for="name">Tên:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Email field (sử dụng type=email để trình duyệt kiểm tra cơ bản) -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Message textarea -->
+        <label for="message">Nội dung:</label>
+        <textarea id="message" name="message" rows="4" cols="30"></textarea>
+
+        <!-- Submit button -->
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Cửa hàng sách An Khang</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
