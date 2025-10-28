@@ -1,5 +1,4 @@
-// JS cho trang sản phẩm (bản ghi chú kiểu học sinh)
-// Ghi chú ngắn: file này xử lý tìm kiếm, mở form thêm, validate và thêm sản phẩm mới vào trang
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('searchInput');
@@ -72,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     err.textContent = '';
     err.style.display = 'none';
 
-    // Tạo phần tử product mới và đưa lên đầu (nhìn giống các sản phẩm khác)
+    // Tạo phần tử product mới và đưa lên đầu 
     const article = document.createElement('article');
     article.className = 'product-item';
     article.innerHTML = `<h3 class="product-name">${escapeHtml(name)}</h3>
@@ -100,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Hàm nhỏ: format số thành định dạng VN và thêm ₫
+  // Hàm format số thành định dạng VN và thêm ₫
   function formatPrice(n) {
     try {
       return n.toLocaleString('vi-VN') + '₫';
@@ -109,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Hàm nhỏ: escape HTML (đỡ chèn mã độc dạng cơ bản)
+  // Hàm escape HTML (đỡ chèn mã độc dạng cơ bản)
   function escapeHtml(str) {
     return str.replace(/[&<>\"']/g, function (m) {
       return ({

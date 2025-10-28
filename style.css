@@ -1,17 +1,17 @@
-/* 1–2. Style chung (ghi chú kiểu học sinh) */
+
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body { font-family: sans-serif; line-height: 1.6; background: #f8fafc; color: #111827; }
 img { max-width: 100%; display: block; }
 
-/* Các style hỗ trợ giao diện và JS (viết ngắn cho dễ hiểu) */
+/* Các style hỗ trợ giao diện và JS */
 .product-controls{display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem}
 .product-controls input{padding:0.5rem; border-radius:6px; border:1px solid #d1d5db}
 .product-controls button{padding:0.5rem 0.7rem; border-radius:6px; border:none; background:#2b7a78; color:#fff}
 .hidden{display:none}
 .product-name{margin:0}
 
-/* Phần header và thanh menu (dễ hiểu) */
+/* Phần header và thanh menu */
 header { background: #111827; color: #fff; padding: 16px; }
 header h1 { margin: 0 0 8px; font-size: 1.4rem; }
 nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
@@ -20,14 +20,14 @@ nav li:last-child { margin-right: 0; }
 nav a { color: #fff; text-decoration: none; opacity: .95; }
 nav a:hover { text-decoration: underline; opacity: 1; }
 
-/* Container sản phẩm: bỏ margin/padding thừa */
+/* Container sản phẩm*/
 .products-list, #product-list { 
   margin: 0;
   padding: 0;
 }
-/* Làm cho #products thẳng hàng với tiêu đề */
+/* products */
 #products { padding: 0; }
-/* Hiển thị sản phẩm theo hàng dọc (dễ đọc trên trang đơn giản) */
+/* Hiển thị sản phẩm theo hàng dọc*/
 .products-list { display: flex; flex-direction: column; gap: 12px; }
 .product-item {
   width: 100%;
@@ -52,7 +52,7 @@ button {
   border-radius: 10px; cursor: pointer;
 }
 button:hover { filter: brightness(1.05); }
-/* Footer nền giống header */
+/* Footer giống header */
 footer { background: #111827; color: #e2e8f0; text-align: center; padding: 10px 0; }
 
 /* Lỗi hiện trong form (màu đỏ) */
@@ -60,7 +60,7 @@ footer { background: #111827; color: #e2e8f0; text-align: center; padding: 10px 
 .form-actions { display: flex; gap: 0.5rem; }
 .form-actions button { flex: none; }
 
-/* Responsive cơ bản (điện thoại) */
+/* Responsive cơ bản*/
 @media (max-width: 600px) {
   #product-list { flex-direction: column; }
   .product-item { flex: 1 1 100%; }
